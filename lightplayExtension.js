@@ -111,6 +111,15 @@
 
     ext.fade_speed = 1100;
 
+    ext._shutdown = function () {
+        if (device) {
+            if (device.is_open()){
+                device.disconnect();
+            }
+            device = null;
+        }
+    }
+
     ext._getStatus = function () {
 
         if (device) {
