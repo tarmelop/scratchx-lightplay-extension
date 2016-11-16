@@ -272,7 +272,7 @@
             ['w', 'fade in %m.lights', 'fade_in', "all lights"],
             ['w', 'fade out %m.lights ', 'fade_out', "all lights"],
             ['w', 'set  fade speed to %m.speeds', 'set_fade_speed', 'slow'],
-            ['w', 'set  %m.lights color to %n %n %n', 'set_rgb_color', "all lights", '100', '100', '100'],
+            //['w', 'set  %m.lights color to %n %n %n', 'set_rgb_color', "all lights", '100', '100', '100'],
             ['w', 'set  brightness of %m.lights to %m.power', 'set_power', "all lights", 'high'],
             // Motor cmds
             ['w', 'turn on motor', 'send_motor_on'],
