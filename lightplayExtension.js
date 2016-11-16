@@ -132,7 +132,7 @@
         device = dev;
         device.open(function (d) {
             if (device == d) {
-                device.set_sensor_handler(null);
+                //device.set_sensor_handler(null);
             }
             else if (d) {
                 console.log('Received open callback for wrong device');
