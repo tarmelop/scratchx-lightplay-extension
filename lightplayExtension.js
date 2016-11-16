@@ -165,7 +165,7 @@
     }
 
     ext.send_on = function(channel, callback) {
-        console.log("turn on");
+        //console.log("turn on");
         send_to_channel(PROTOCOL.LIGHT, channel, PROTOCOL.LIGHTCOMMAND.ON, callback);
 
     };
