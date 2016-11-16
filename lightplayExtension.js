@@ -275,7 +275,7 @@
             ['H', 'when %m.sensors', 'poll_sensor', "sensor clips are connected"],
         ],
 
-        url: 'https://github.com/bsb20/scratch-to-serial/tree/gh-pages',
+        url: 'https://github.com/tarmelop/scratchx-lightplay-extension',
         menus: {
             power: ['low', 'medium', 'high'],
             colors: ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'surprise'],
@@ -293,6 +293,6 @@
     var tx = {};
     tx[TX] = {};
     device_info["write_characteristics"] = tx;
-    ScratchExtensions.register('Lightplay 1', descriptor, ext, { info: device_info, type: 'ble' });
+    ScratchExtensions.register('Lightplay', descriptor, ext, { info: device_info, type: 'ble' });
 
 })({});
