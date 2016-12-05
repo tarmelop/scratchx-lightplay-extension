@@ -109,6 +109,7 @@
     var device = null;
 
 
+    ext.light_delay = 350;
     ext.fade_speed = 1100;
 
     ext._shutdown = function () {
@@ -174,8 +175,9 @@
     }
 
     ext.send_on = function(channel, callback) {
-        //console.log("turn on");
-        send_to_channel(PROTOCOL.LIGHT, channel, PROTOCOL.LIGHTCOMMAND.ON, callback);
+        send_to_channel(PROTOCOL.LIGHT, channel, PROTOCOL.LIGHTCOMMAND.ON, function(data) {
+            setTimeout(callback, ext.light_delay, data);
+        });
 
     };
 
@@ -252,7 +254,9 @@
     };
 
     ext.set_color = function(channel, color, callback) {
-        send_to_channel(PROTOCOL.SET, channel, COLORS[color], callback);
+        send_to_channel(PROTOCOL.SET, channel, COLORS[color], function(data) {
+            setTimeout(callback, ext.light_delay, data);
+        });
     };
 
     ext.fade_color = function(channel, color, callback) {
